@@ -17,9 +17,13 @@ public class TestController {
     @RequestMapping("/save")
     public String process(){
         // save a list of Customers
-        repository.save(Arrays.asList(new Customer("Jack", "Smith"), new Customer("Adam", "Johnson"), new Customer("Kim", "Smith"),
-                new Customer("David", "Williams"), new Customer("Peter", "Davis")));
-
+       /* repository.save(Arrays.asList(new Customer("Jack", "Smith"), new Customer("Adam", "Johnson"), new Customer("Kim", "Smith"),
+                new Customer("David", "Williams"), new Customer("Peter", "Davis")));*/
+       repository.save(new Customer("Jack", "Smith"));
+       repository.save(new Customer("Adam", "Johnson"));
+       repository.save(new Customer("Kim", "Smith"));
+       repository.save(new Customer("David", "Williams"));
+       repository.save(new Customer("Peter", "Davis"));
         return "Done";
     }
 
